@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -5,6 +6,7 @@ SECRET_KEY = 'django-insecure-8e#qaf_(x#do=$--t+%jpqfrop!#@5s9e=a_y0v35(0kqdav7i
 DEBUG = True
 ROOT_URLCONF = 'core.urls'
 ALLOWED_HOSTS = []
+HOST_ADDRESS = 'http://127.0.0.1:8000/'
 
 INSTALLED_APPS = [
     'django.contrib.admin',
@@ -13,6 +15,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'src.website',
 ]
 
 MIDDLEWARE = [
@@ -71,5 +74,12 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'static')
+]
+STATIC_ROOT = os.path.join(BASE_DIR, 'assets')
+
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
