@@ -1,0 +1,52 @@
+{% load static %}
+
+
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle arrow-none" href="{% url 'customer-portal:dashboard' %}">
+        <i class="bx bx-home-circle mr-2"></i>Dashboard
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle arrow-none" href="{% url 'customer-portal:wallet-detail' %}">
+        <i class="fa fa-wallet mr-2"></i>Wallet
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle arrow-none" href="{% url 'customer-portal:topup-list' %}">
+        <i class="fa fa-coins mr-2"></i>Top Up
+    </a>
+</li>
+
+
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle arrow-none" href="{% url 'customer-portal:transaction-list' %}">
+        <i class="fa fa-credit-card mr-2"></i>Transactions
+    </a>
+</li>
+
+<li class="nav-item">
+    <a class="nav-link dropdown-toggle arrow-none" href="{% url 'customer-portal:withdrawal-list' %}">
+        <i class="fa fa-hands-helping mr-2"></i>Withdrawals
+    </a>
+</li>
+
+{#DASHBOARD#}
+{# Apps #}
+<li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle arrow-none" href="#" id="topnav-pages" role="button"
+       data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <i class="bx bx-money mr-2"></i>Settings
+        <div class="arrow-down"></div>
+    </a>
+    <div class="dropdown-menu" aria-labelledby="topnav-pages">
+
+        <a href="{% url 'customer-portal:ticket-list' %}" class="dropdown-item">Report</a>
+        <a href="#" class="dropdown-item">2-Step Auth</a>
+        <a href="#" class="dropdown-item">Permissions</a>
+    </div>
+</li>
+
+
+{# ------------------------------------------------------------------------------------------------------------------ #}

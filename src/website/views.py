@@ -1,8 +1,10 @@
 import uuid
-from django.shortcuts import render
+
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 from django.utils.decorators import method_decorator
 from django.views.decorators.csrf import csrf_exempt
-from django.views.generic import TemplateView
+from django.views.generic import TemplateView, ListView, DetailView
 from src.website.models import ScanImage
 
 
@@ -29,10 +31,15 @@ class HomeView(TemplateView):
             f.write(data)
             s = ScanImage.objects.create(image_url=address)
 
-        return render(request, template_name='website/home.html')
+        return HttpResponse(s.pk)
 
 
-class ImageListView(TemplateView):
+class ImageListView(ListView):
+    queryset = ScanImage.objects.all()
     template_name = 'website/scanimage_list.html'
+    paginate_by = 20
 
 
+class ImageDetailView(DetailView):
+    model = ScanImage
+    template_name = 'website/scanimage_detail.html'

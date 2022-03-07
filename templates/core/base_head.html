@@ -1,0 +1,69 @@
+{% load static %}
+
+{# MAIN HEADER ------------------------------------------------------------------------------------------------------ #}
+<header id="page-topbar">
+    <div class="navbar-header">
+
+        {# LEFT HEAD ------------------- #}
+        <div class="d-flex">
+            <div class="navbar-brand-box">
+                <a href="/" class="logo logo-dark">
+                    <span class="logo-sm">
+                        <img src="{% static 'core/images/logo-100.png' %}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{% static 'core/images/logo-100.png' %}" alt="" height="17">
+                    </span> <b class="text-white"> SKISIP</b>
+                </a>
+
+                <a href="/" class="logo logo-light">
+                    <span class="logo-sm">
+                        <img src="{% static 'core/images/logo-100.png' %}" alt="" height="22">
+                    </span>
+                    <span class="logo-lg">
+                        <img src="{% static 'core/images/logo-100.png' %}" alt="" height="19">
+                    </span> <b class="text-white"> SKISIP</b>
+                </a>
+            </div>
+
+            <button type="button" class="btn btn-sm px-3 font-size-16 d-lg-none header-item waves-effect waves-light"
+                    data-toggle="collapse" data-target="#topnav-menu-content">
+                <i class="fa fa-fw fa-bars"></i>
+            </button>
+
+        </div>
+
+        {# RIGHT HEAD ------------------ #}
+        <div class="d-flex">
+
+            {# FULL_SCREEN -------------------------------------------------------- #}
+
+            <div class="dropdown d-none d-lg-inline-block ml-1">
+                <button type="button" class="btn header-item noti-icon waves-effect" data-toggle="fullscreen">
+                    <i class="bx bx-fullscreen"></i>
+                </button>
+            </div>
+
+
+            {# USER INFO ---------------------------------------------------------- #}
+
+        </div>
+
+    </div>
+</header>
+
+{# SUB HEADER ------------------------------------------------------------------------------------------------------- #}
+<div class="topnav">
+    <div class="container-fluid">
+        <nav class="navbar navbar-light navbar-expand-lg topnav-menu">
+
+            <div class="collapse navbar-collapse" id="topnav-menu-content">
+                <ul class="navbar-nav">
+
+                    {% include 'core/include/admin_header.html' %}
+
+                </ul>
+            </div>
+        </nav>
+    </div>
+</div>

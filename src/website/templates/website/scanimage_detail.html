@@ -1,0 +1,30 @@
+{% extends 'core/base.html' %}
+
+{% block page_heading %}
+    <a href="{% url 'website:home' %}"><b><i class="fa fa-arrow-left"></i> Scan Again</b></a>
+{% endblock %}
+
+{% block content %}
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <div class="card">
+
+                <div class="card-body border-bottom">
+                    <p class="mb-0 card-title">Scan Information</p>
+                </div>
+                <div class="card-body border-bottom">
+                    <img src="{{ object.image_url.url }}" class="img-responsive img-fluid">
+                </div>
+                <div class="card-body">
+                    <p class="mb-0 h1">Stress Level</p>
+                    <p class="mb-0 card-title mb-0">{{ object.stress_level }}
+                        {% if object.stress_level %}
+                            %
+                        {% endif %}
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+{% endblock %}
