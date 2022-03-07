@@ -2,13 +2,8 @@
   <a href="https://exarth.com/"><img src="https://exarth.com/static/exarth/theme/logo-red-1000.svg" height="150"></a>
 </p><hr>
 
-# E Wallet
-## Sent your cash anywhere
-
-Online Wallet application to transfer funds and to pay bills of credit card, with mastercard, visa, american express, google pay and apple pay all payments are supported
-
-## Features
- - 
+# Expression detector
+## an ai powered application to detect expressions of humans
 
 ## Tech
 
